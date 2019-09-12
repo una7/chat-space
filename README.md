@@ -43,7 +43,7 @@ Things you may want to cover:
 |name|text|null: false|
 
 ### Association
-- belongs_to :user,  through:user_group
+- has_many :user,  through:user_group
 - has_many :user_group
 - has_many :messages
 
@@ -53,8 +53,8 @@ Things you may want to cover:
 |------|----|-------|
 |text|text|
 |image|text|
-|user_id|references|null: false, foreign_key: true|
-|group_id|references|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 
 ### Association
