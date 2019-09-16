@@ -1,0 +1,86 @@
+!!!
+.wrapper
+.flash-box
+  -# グループを作成しました。
+  .chat-side
+    .side-header
+      .side-header__box
+        %p.side-header__box__user-name
+          una
+        %ul.side-header__box__menu
+          %li.side-header__box__menu__new-group
+            %a{:href => "/groups/new"}
+          %li.side-header__box__menu__edit-user
+            %i.fa.fa-edit
+            %a{:href =>"/users/625/edit"}
+            %i.fa.fa-cog
+          
+    .groups
+      .group
+        %p.group__group-name
+          group
+        %p.group__latest-message
+          こんにちは
+
+      .group
+        %p.group__group-name
+          group
+        %p.group__latest-message
+          やほー
+
+  .chat-main
+    .main-header
+      .main-header__left-box
+        %h2.main-header__left-box__current-group
+          group
+        %ul.main-header__left-box__member-list
+          Member：una
+          -# %li.main-header__left-box__member-list__member 
+            
+
+        %a{:href =>"/groups/1147/edit"}   
+          .main-header__edit-btn
+            Edit
+
+
+    .messages
+      .message
+        .message__upper-info
+          .message__upper-info__talker
+            una
+          .message__upper-info__date
+            2019/09/11(Wed) 20:19:09
+        .message__text
+          aaaaa
+
+        .message__upper-info
+          .message__upper-info__talker
+            una
+          .message__upper-info__date
+            2019/09/11(Wed) 20:19:09
+        .message__text
+          aaaaa
+    
+    .form
+      %form
+        %input.form__message{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+        .form__icon
+          %label.form__icon__image
+            = fa_icon 'picture-o', class: 'icon'
+            %input.hidden{type: 'file'}
+        %input.form__submit-btn{type: 'submit', value: 'Send'}
+
+
+    -# .form
+    -#   %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/1147/messages", :enctype => "multipart/form-data", :method => "post"}
+    -#     %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+    -#     %input{:name => "authenticity_token", :type => "hidden", :value => "sARHJrctHiZTsR2dk+59HWx7Q43GctmurSblDVwjC7nGuMLqoHDTQhDOpv40nD/fgCuKz0y3kMLtA7dnNMYXSA=="}/
+    -#     .input-box
+        
+    -#       
+    -#       %label.input-box__image{:for => "message_image"}
+    -#         %i.fa.fa-image
+    -#         %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
+    -#         %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+            
+
