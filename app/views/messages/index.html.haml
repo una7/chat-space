@@ -1,31 +1,6 @@
-!!!
 .wrapper
-.flash-box
-  .chat-side
-    .side-header
-      .side-header__box
-        %p.side-header__box__user-name
-          una
-        %ul.side-header__box__menu
-          %li.side-header__box__menu__new-group
-            %a{:href => "/groups/new"}
-          %li.side-header__box__menu__edit-user
-            %i.fa.fa-edit
-            %a{:href =>"/users/625/edit"}
-            %i.fa.fa-cog
-          
-    .groups
-      .group
-        %p.group__group-name
-          group
-        %p.group__latest-message
-          こんにちは
 
-      .group
-        %p.group__group-name
-          group
-        %p.group__latest-message
-          やほー
+  = render "messages/chat-side"
 
   .chat-main
     .main-header
@@ -67,6 +42,3 @@
             = fa_icon 'picture-o', class: 'icon'
             %input.hidden{type: 'file'}
         %input.form__submit-btn{type: 'submit', value: 'Send'}
-
-
-        
