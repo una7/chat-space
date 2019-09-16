@@ -3,40 +3,6 @@
 @import "font-size";
 @import "./reset";
 @import "vendor_prefix";
-
-
+@import "side-chat";
+@import "chat-main";
 @import "messages";
-
-
-
-
-
-// @import "";
-// @import "modules/chat";
-
-
-
-.wrapper{
-  width:  2000px;
-}
-
-
-
-.chat-main {
-  width: calc(100vw - 300px);
-  float: left;
-}
-
-
-.chat-side {
-  width: 300px;
-  color: white;
-  float: left;
-}
-
-
-
-a {
-  color: white;
-  text-decoration: none;
-}
