@@ -7,7 +7,7 @@
 
 .chat-side{
   width: 300px;
-  color: white;
+  color:$side_blue_light;
   float: left;
   
  .side-header {
@@ -62,6 +62,7 @@
 .group{
   font-size: 15px;
   margin-bottom: 5px;
+
 }
 
 .group__group-name{
@@ -126,7 +127,7 @@
 
 
 .messages{
-  height: calc(100vh - 190px);
+  height: calc(100vh - 263px);
   padding: 46px 40px;
   background-color: #fafafa;
   overflow: scroll;
