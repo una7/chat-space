@@ -1,0 +1,44 @@
+.wrapper
+
+  = render "messages/chat-side"
+
+  .chat-main
+    .main-header
+      .main-header__left-box
+        %h2.main-header__left-box__current-group
+          group
+        %ul.main-header__left-box__member-list
+          Member：una
+            
+
+          
+          .main-header__edit-btn
+            Edit
+
+
+    .messages
+      .message
+        .message__upper-info
+          .message__upper-info__talker
+            una
+          .message__upper-info__date
+            2019/09/11(Wed) 20:19:09
+        .message__text
+          aaaaa
+
+        .message__upper-info
+          .message__upper-info__talker
+            una
+          .message__upper-info__date
+            2019/09/11(Wed) 20:19:09
+        .message__text
+          aaaaa
+    
+    .form
+      %form
+        %input.form__message
+        .form__icon
+          %label.form__icon__image
+            = fa_icon 'picture-o', class: 'icon'
+            %input.hidden{type: 'file'}
+        %input.form__submit-btn{type: 'submit', value: 'Send'}
