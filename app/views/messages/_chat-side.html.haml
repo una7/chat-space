@@ -2,24 +2,36 @@
   .side-header
     .side-header__box
       %p.side-header__box__user-name
-        una
+
+        = current_user.name
       %ul.side-header__box__menu
         %li.side-header__box__menu__new-group
-          = link_to '#' do
+          = link_to new_group_path do
             = fa_icon 'pencil-square-o', class: 'icon'
         %li.side-header__box__menu__edit-user
-          = link_to '#' do
+          = link_to edit_user_path(current_user) do
             = fa_icon 'cog', class: 'icon'
           
-  .groups
-    .group
-      %p.group__group-name
-        group
-      %p.group__latest-message
-        こんにちは
 
-    .group
-      %p.group__group-name
-        group
-      %p.group__latest-message
-        やほー
+  .groups
+    - current_user.groups.each do |group|
+      .group
+        = link_to group_messages_path(group) do
+          %p.group__group-name
+            = group.name
+          %p.group__latest-message
+            メッセージはまだありません。
+
+-# 自分で書いたコード（行間合う）
+  -# .groups
+  -#   .group
+  -#     %p.group__group-name
+  -#       group
+  -#     %p.group__latest-message
+  -#       こんにちは
+
+  -#   .group
+  -#     %p.group__group-name
+  -#       group
+  -#     %p.group__latest-message
+  -#       やほー            
