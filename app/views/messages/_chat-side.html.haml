@@ -20,18 +20,4 @@
           %p.group__group-name
             = group.name
           %p.group__latest-message
-            メッセージはまだありません。
-
--# 自分で書いたコード（行間合う）
-  -# .groups
-  -#   .group
-  -#     %p.group__group-name
-  -#       group
-  -#     %p.group__latest-message
-  -#       こんにちは
-
-  -#   .group
-  -#     %p.group__group-name
-  -#       group
-  -#     %p.group__latest-message
-  -#       やほー            
+            = group.show_last_message
