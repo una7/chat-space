@@ -5,9 +5,10 @@
     .main-header
       .main-header__left-box
         %h2.main-header__left-box__current-group
-          group
+          =@group.name
         %ul.main-header__left-box__member-list
-          Member：una
+          - @group.users.each do |user|
+            =user.name
             
 
           
