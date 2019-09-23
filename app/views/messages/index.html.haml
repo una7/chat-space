@@ -19,32 +19,6 @@
 
     .messages
       = render @messages
-      -# .message
-      -#   .message__upper-info
-      -#     .message__upper-info__talker
-      -#       una
-      -#     .message__upper-info__date
-      -#       2019/09/11(Wed) 20:19:09
-      -#   .message__text
-      -#     aaaaa
-
-      -#   .message__upper-info
-      -#     .message__upper-info__talker
-      -#       una
-      -#     .message__upper-info__date
-      -#       2019/09/11(Wed) 20:19:09
-      -#   .message__text
-      -#     aaaaa
-    
-    -# .form
-    -#   %form
-    -#     %input.form__message
-    -#     .form__icon
-    -#       %label.form__icon__image
-    -#         = fa_icon 'picture-o', class: 'icon'
-    -#         %input.hidden{type: 'file'}
-    -#     %input.form__submit-btn{type: 'submit', value: 'Send'}
-
     .form
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
