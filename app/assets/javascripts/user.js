@@ -34,7 +34,6 @@ $(function(){
       $("#user-search-result").empty();
       return false
     }
-    // console.log(input);
 
     $.ajax({
       type: 'GET',
@@ -45,7 +44,6 @@ $(function(){
 
     .done(function(data) {
       $("#user-search-result").empty();
-      console.log(data)
       if (data.length !== 0) {
         data.forEach(function(user){
         appendUser(user);
@@ -63,7 +61,6 @@ $(function(){
 
 
   $("#user-search-result").on("click", ".user-search-add", function () {
-    console.log("クリックOK")
     var name = $(this).data("user-name");
     var user_id = $(this).data("user-id");
     addUser(name, user_id);
